@@ -7,8 +7,8 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		
-		//AbstractApplicationContext ctx = new GenericXmlApplicationContext();
-		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
+		//AbstractApplicationContext ctx = new GenericXmlApplicationContext();	//업캐스팅
+		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();	// AbstractApplicationContext 보다 상위 클래스
 		
 		ctx.load("classpath:applicationCTX.xml");
 		
