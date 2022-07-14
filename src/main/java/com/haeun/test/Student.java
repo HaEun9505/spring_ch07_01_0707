@@ -1,10 +1,9 @@
-
 package com.haeun.test;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class Student implements InitializingBean, DisposableBean{	//Bean ÃÊ±âÈ­,»èÁ¦ »ó¼Ó¹ŞÀº Å¬·¡½º	
+public class Student implements InitializingBean, DisposableBean{	//Bean ì´ˆê¸°í™”,ì‚­ì œ ìƒì†ë°›ì€ í´ë˜ìŠ¤	
 	private String name;
 	private int age;
 	
@@ -27,14 +26,14 @@ public class Student implements InitializingBean, DisposableBean{	//Bean ÃÊ±âÈ­,
 	}
 	
 	@Override
-	//DisposableBean(ÆÄ±«) - bean ¼Ò¸ê°úÁ¤¿¡¼­ ÀÚµ¿ È£Ãâ
+	//DisposableBean(íŒŒê´´) - bean ì†Œë©¸ê³¼ì •ì—ì„œ ìë™ í˜¸ì¶œ
 	public void destroy() throws Exception {	
-		System.out.println("destroy() ½ÇÇàµÊ!!");
+		System.out.println("destroy() ì‹¤í–‰ë¨!!");
 		
 	}
 	@Override
-	//InitializingBean - beanÀÇ ¼Ó¼ºÀÌ ¼ÂÆÃµÈ ÈÄ ÃÊ±âÈ­(bean ÃÊ±âÈ­ °úÁ¤¿¡¼­ ÀÚµ¿ È£Ãâ)
+	//InitializingBean - beanì˜ ì†ì„±ì´ ì…‹íŒ…ëœ í›„ ì´ˆê¸°í™”(bean ì´ˆê¸°í™” ê³¼ì •ì—ì„œ ìë™ í˜¸ì¶œ)
 	public void afterPropertiesSet() throws Exception {	
-		System.out.println("afterPropertiesSet() ½ÇÇàµÊ!!");
+		System.out.println("afterPropertiesSet() ì‹¤í–‰ë¨!!");
 	}
 }

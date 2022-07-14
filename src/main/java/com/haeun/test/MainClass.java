@@ -7,16 +7,16 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		
-		//AbstractApplicationContext ctx = new GenericXmlApplicationContext();	//¾÷Ä³½ºÆÃ
-		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();	// AbstractApplicationContext º¸´Ù »óÀ§ Å¬·¡½º
+		//AbstractApplicationContext ctx = new GenericXmlApplicationContext();	//ì—…ìºìŠ¤íŒ…
+		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();	// AbstractApplicationContext ë³´ë‹¤ ìƒìœ„ í´ë˜ìŠ¤
 		
 		ctx.load("classpath:applicationCTX.xml");
 		
-		//Àç·Îµå
+		//ì¬ë¡œë“œ
 		ctx.refresh();
 		
 		Student student = ctx.getBean("student", Student.class);
-		System.out.println(student.getName());	//È«±æµ¿ Ãâ·Â
+		System.out.println(student.getName());	//í™ê¸¸ë™ ì¶œë ¥
 		
 		ctx.close();
 	}
